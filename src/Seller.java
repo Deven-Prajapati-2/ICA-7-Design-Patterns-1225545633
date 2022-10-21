@@ -1,11 +1,12 @@
 public class Seller extends Person {
-
-	public void showMenu() {
-
+	public Seller() {}
+	public boolean showMenu() {
+		return theProductMenu.showMenu();
 	}
-
-	public ProductMenu CreateProductMenu() {
-		return null;
+	@Override
+	public ProductMenu CreateProductMenu(Product product, int productType) {
+		theProductMenu = new ProduceProductMenu(product);
+		theProductMenu.setProductMenu(theProductMenu);
+		return theProductMenu;
 	}
-
 }
